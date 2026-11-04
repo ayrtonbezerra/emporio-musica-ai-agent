@@ -8,6 +8,7 @@ from emporio.tools.products import (
 )
 from emporio.tools.policies import get_store_policy
 from emporio.tools.orders import get_order_details
+from emporio.tools.promotions import get_promotions
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -28,7 +29,8 @@ agent = create_agent(
         search_products,
         get_product_details,
         get_store_policy,
-        get_order_details
+        get_order_details,
+        get_promotions
     ],
     system_prompt = SYSTEM_PROMPT
 )
