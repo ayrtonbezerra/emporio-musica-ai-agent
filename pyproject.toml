@@ -8,6 +8,7 @@ dependencies = [
     "langchain>=1.4.8",
     "langchain-openai>=1.7.3",
     "langsmith>=0.14.17",
+    "psycopg[binary]>=3.3.7",
     "python-dotenv>=1.2.4",
 ]
 
