@@ -1,15 +1,13 @@
-
 from pathlib import Path
-
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
-
 from emporio.tools.products import (
     search_products,
     get_product_details,
 )
 from emporio.tools.policies import get_store_policy
+from emporio.tools.orders import get_order_details
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,7 +27,8 @@ agent = create_agent(
     tools = [
         search_products,
         get_product_details,
-        get_store_policy
+        get_store_policy,
+        get_order_details
     ],
     system_prompt = SYSTEM_PROMPT
 )
