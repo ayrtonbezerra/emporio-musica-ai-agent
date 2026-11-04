@@ -24,6 +24,19 @@ model = ChatOpenAI(
     temperature=0,
 )
 
+def build_agent(checkpointer):
+    return create_agent(
+        model=model,
+        tools=[
+            search_products,
+            get_product_details,
+            get_store_policy,
+            get_order_details,
+            get_promotions,
+        ],
+        system_prompt=SYSTEM_PROMPT,
+        checkpointer=checkpointer,
+    )
 
 def main():
     with PostgresSaver.from_conn_string(
@@ -34,18 +47,7 @@ def main():
         )
     ) as checkpointer:
 
-        agent = create_agent(
-            model=model,
-            tools=[
-                search_products,
-                get_product_details,
-                get_store_policy,
-                get_order_details,
-                get_promotions,
-            ],
-            system_prompt=SYSTEM_PROMPT,
-            checkpointer=checkpointer,
-        )
+        agent = build_agent(checkpointer)
 
         config = {
             "configurable": {
