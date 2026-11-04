@@ -9,9 +9,15 @@ from emporio.tools.products import (
     search_products,
     get_product_details,
 )
+from emporio.tools.policies import get_store_policy
 
 ROOT = Path(__file__).resolve().parents[2]
+
 load_dotenv(ROOT / ".env")
+
+PROMPT_PATH = ROOT / "prompts" / "system.md"
+
+SYSTEM_PROMPT = PROMPT_PATH.read_text(encoding="utf-8")
 
 model = ChatOpenAI(
     model="gpt-4.1-mini",
@@ -20,24 +26,12 @@ model = ChatOpenAI(
 
 agent = create_agent(
     model=model,
-    tools=[search_products, get_product_details],
-    system_prompt="""
-    Você é o assistente virtual da Empório da Música,
-    uma loja especializada em instrumentos musicais.
-
-    Seu tom deve ser amigável, objetivo e profissional.
-
-    Regras:
-    - Consulte as ferramentas antes de informar preços,
-      estoque ou características de produtos.
-    - Nunca invente informações sobre produtos.
-    - Se não encontrar um produto, informe ao cliente.
-    - Não realize vendas ou reservas.
-    - Responda sempre em português brasileiro.
-    - A loja comercializa exclusivamente instrumentos musicais.
-    - Não ofereça acessórios como cordas, palhetas, cabos,
-    pedais ou amplificadores.
-    """,
+    tools = [
+        search_products,
+        get_product_details,
+        get_store_policy
+    ],
+    system_prompt = SYSTEM_PROMPT
 )
 
 

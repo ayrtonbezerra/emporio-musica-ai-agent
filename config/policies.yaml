@@ -1,0 +1,499 @@
+# Política da Emporio da Música extraídas do PDF em data\políticas_da_loja.pdf
+
+store_info:
+  source: "Seção 1 - Sobre a Empório da Música"
+  name: "Empório da Música"
+  legal_name: "Empório da Música Instrumentos Musicais Ltda."
+  cnpj: "12.345.678/0001-90"
+  founded: 2008
+  address: "Rua 14 de Maio, 3200 - Centro, Campo Grande - MS, CEP 79202-333"
+  phone: "(67) 3341-4444"
+  email: "contato@emporiodamusica.com.br"
+
+  mission: >
+    Democratizar o acesso a instrumentos musicais de qualidade
+    na região Centro-Oeste, oferecendo atendimento especializado
+    e preços competitivos, contribuindo para o desenvolvimento
+    cultural e musical da comunidade.
+
+  business_scope:
+    sells: "Exclusivamente instrumentos musicais."
+    categories:
+      - Guitarras
+      - Baixos
+      - Violões
+      - Baterias
+      - Teclados
+      - Instrumentos de sopro
+      - Cordas orquestrais
+      - Ukuleles
+
+    does_not_sell:
+      - Cordas avulsas
+      - Palhetas
+      - Cabos
+      - Cases
+      - Pedais
+      - Amplificadores
+
+
+store_hours:
+  source: "Seção 2 - Horário de Funcionamento"
+  weekdays: "09:00 às 18:00"
+  saturday: "09:00 às 13:00"
+  sundays_and_holidays: "Fechado"
+
+  whatsapp_hours: "Mesmo horário do atendimento presencial."
+
+  outside_business_hours: >
+    O atendimento via WhatsApp utiliza respostas automáticas
+    fora do expediente.
+
+  notes: >
+    Em datas especiais, como Black Friday, Aniversário da Loja
+    e Natal, o horário pode ser estendido. Alterações serão
+    comunicadas antecipadamente nas redes sociais e no WhatsApp.
+
+
+payments:
+  source: "Seções 3 e 3.1 - Pagamentos e Parcelamento"
+
+  accepted_methods:
+    pix:
+      payment_type: "À vista"
+      discount_percent: 5
+      discount_base: "Preço de tabela"
+      cumulative_with_promotions: false
+
+    debit_card:
+      payment_type: "À vista"
+      accepted_brands: "Todas as bandeiras"
+
+    credit_card:
+      max_installments: 12
+      interest_free: true
+
+      general_rule: >
+        Até 12 parcelas sem juros. A tabela geral apresenta
+        parcela mínima de R$ 100,00, enquanto a seção 3.1
+        estabelece condições específicas por faixa.
+
+      installment_rules:
+        up_to_3:
+          min_installments: 1
+          max_installments: 3
+          interest_free: true
+          notes: >
+            Sem valor mínimo de parcela, exceto abaixo
+            de R$ 50,00, conforme o texto do manual.
+
+        from_4_to_6:
+          min_installments: 4
+          max_installments: 6
+          interest_free: true
+          min_installment_brl: 80.00
+
+        from_7_to_12:
+          min_installments: 7
+          max_installments: 12
+          interest_free: true
+          min_installment_brl: 100.00
+
+    bank_slip:
+      payment_type: "À vista"
+      clearing_time: "Até 3 dias úteis"
+
+  split_payment:
+    allowed: true
+    minimum_purchase_brl_exclusive: 2000.00
+    example: "PIX + cartão"
+    notes: "Permitido para compras acima de R$ 2.000,00."
+
+  notes: >
+    Em caso de dúvida sobre a interpretação dos valores
+    mínimos de parcelas, consultar o atendimento humano.
+
+
+returns_and_exchanges:
+  source: "Seção 4 - Política de Trocas e Devoluções"
+
+  online_purchase_withdrawal:
+    source: "Seção 4.1 - Direito de Arrependimento"
+    applies_to: "Compras online"
+    deadline_calendar_days: 7
+    deadline_start: "Recebimento do produto"
+    justification_required: false
+
+    conditions:
+      - Produto na embalagem original
+      - Produto sem sinais de uso
+      - Presença de todos os acessórios e manuais
+
+    refund:
+      deadline_business_days: 10
+      method: "Mesma forma de pagamento original"
+
+    return_shipping_paid_by: "Loja"
+
+  manufacturing_defect:
+    source: "Seção 4.2 - Trocas por Defeito"
+    exchange_deadline_calendar_days: 30
+    deadline_start: "Data da compra"
+
+    after_deadline: >
+      O manual orienta o cliente a acionar a garantia
+      diretamente com o fabricante após 30 dias.
+      A loja pode intermediar o processo mediante solicitação.
+
+    excluded_causes:
+      - Mau uso
+      - Quedas
+      - Exposição à umidade excessiva
+      - Modificações não autorizadas
+
+    notes: >
+      A seção 8.1 prevê garantia legal de 90 dias após
+      o recebimento do produto. O prazo de troca descrito
+      nesta seção não deve ser confundido com o prazo
+      da garantia legal. Encaminhar casos ambíguos
+      ao atendimento humano.
+
+  preference_exchange:
+    source: "Seção 4.3 - Trocas por Preferência"
+    deadline_days: 7
+
+    reasons:
+      - Cor
+      - Modelo
+      - Tamanho
+
+    conditions:
+      - Produto em perfeito estado
+      - Produto na embalagem original
+      - Disponibilidade do produto desejado
+
+    price_difference: >
+      Diferenças de valor serão cobradas ou reembolsadas
+      conforme o caso.
+
+  excluded_items:
+    source: "Seção 4.4 - Itens Não Elegíveis"
+    items:
+      - Instrumentos com personalização
+      - Instrumentos com ajustes sob encomenda
+      - Produtos de liquidação com aviso explícito de venda final
+      - Boquilhas de instrumentos de sopro, por questões de higiene
+
+
+shipping:
+  source: "Seção 5 - Política de Frete e Entregas"
+
+  metropolitan_area:
+    source: "Seção 5.1"
+    region: "Região Metropolitana de Campo Grande"
+
+    free_shipping_above_brl: 500.00
+    shipping_fee_below_brl: 35.00
+
+    delivery_time_business_days:
+      min: 1
+      max: 3
+
+    carrier: "Motoboy próprio"
+
+    notes: >
+      O cliente será contactado por telefone antes
+      da entrega. O manual não especifica expressamente
+      a condição para pedidos de exatamente R$ 500,00.
+
+  other_cities:
+    source: "Seção 5.2"
+
+    carriers:
+      pac:
+        company: "Correios"
+        estimated_business_days:
+          min: 5
+          max: 12
+        tracking: true
+        insurance: true
+
+      sedex:
+        company: "Correios"
+        estimated_business_days:
+          min: 2
+          max: 5
+        tracking: true
+        insurance: true
+
+      jadlog:
+        company: "Jadlog"
+        estimated_business_days:
+          min: 3
+          max: 8
+        tracking: true
+        insurance: true
+
+    shipping_cost: >
+      O frete é calculado com base no CEP de destino,
+      peso e dimensões do produto.
+
+    special_shipping:
+      possible_for:
+        - Baterias acústicas
+        - Pianos digitais
+        - Contrabaixos
+
+      notes: >
+        Instrumentos de grande porte podem exigir
+        frete especial com cotação individual.
+
+    insurance: >
+      Todos os envios incluem seguro contra extravios
+      e danos durante o transporte.
+
+    shipping_damage: >
+      Em caso de avaria, o cliente deve recusar o
+      recebimento e entrar em contato imediatamente
+      com a loja.
+
+  tracking:
+    source: "Seção 5.3 - Código de Rastreamento"
+    sent_when: "Pedido despachado"
+
+    sent_by:
+      - Email
+      - WhatsApp
+
+    format: "BR + 9 caracteres alfanuméricos + BR"
+    example: "BR4K7M2X9P1BR"
+
+    tracking_providers:
+      - Correios
+      - Jadlog
+
+    notes: >
+      O código de rastreamento de um pedido específico
+      deve ser consultado nos dados operacionais,
+      não nesta política.
+
+
+promotions:
+  source: "Seção 6 - Promoções e Descontos"
+
+  campaigns:
+    store_anniversary:
+      month: "Agosto"
+      discount_percent:
+        min: 10
+        max: 25
+      notes: "Itens selecionados"
+
+    black_friday:
+      month: "Novembro"
+      discount_percent:
+        min: 15
+        max: 30
+      notes: "Todo o catálogo"
+
+    back_to_school:
+      month: "Fevereiro"
+      notes: "Descontos especiais para estudantes"
+
+    clearance:
+      notes: "Promoções pontuais para renovação do catálogo"
+
+    musician_week:
+      reference_date: "22 de novembro"
+      notes: "Promoções na semana do Dia do Músico"
+
+  rules:
+    cumulative: false
+    pix_discount_on_promotional_price: false
+    subject_to_stock_availability: true
+    price_reservation_for_sold_out_items: false
+
+    price_display:
+      - Preço original
+      - Preço promocional
+      - Percentual de desconto
+
+  notes: >
+    As campanhas descritas não estão necessariamente
+    vigentes. O agente deve consultar o sistema para
+    verificar promoções ativas e disponibilidade de estoque.
+    Promoções expiradas não devem ser oferecidas.
+
+
+customer_service:
+  source: "Seção 7 - Atendimento via WhatsApp"
+
+  whatsapp: "(67) 3321-4500"
+
+  guidelines:
+    tone: "Informal, amigável e profissional"
+    max_response_minutes: 5
+
+    outside_business_hours: >
+      Informar o horário de retorno do atendimento.
+
+    accuracy: >
+      Nunca fornecer informações sobre preços, estoque
+      ou prazos sem consultar o sistema.
+
+    business_scope: >
+      A loja trabalha exclusivamente com instrumentos
+      musicais. Solicitações de acessórios devem ser
+      educadamente redirecionadas. Sugerir lojas parceiras
+      quando possível, sem inventar estabelecimentos.
+
+  standard_flow:
+    - "Cumprimentar o cliente pelo nome, se disponível"
+    - "Identificar a necessidade do cliente"
+    - "Consultar informações relevantes no sistema"
+    - "Responder de forma clara e objetiva"
+    - "Perguntar se o cliente precisa de mais alguma coisa"
+
+  special_situations:
+    out_of_stock: >
+      Informar que o produto está temporariamente
+      indisponível e sugerir alternativas semelhantes
+      que estejam disponíveis.
+
+    discontinued_product: >
+      Informar que o produto não faz mais parte do
+      catálogo e oferecer modelos equivalentes ou sucessores.
+
+    expired_promotion: >
+      Verificar se a promoção está ativa. Se estiver
+      vencida, informar o preço atual e não prometer
+      descontos expirados.
+
+    complaint:
+      procedure: >
+        Ouvir o cliente com empatia, registrar a
+        reclamação e encaminhar para o responsável.
+      response_deadline: "24 horas úteis"
+      notes: >
+        O assistente não deve afirmar que registrou
+        ou encaminhou uma reclamação sem executar
+        efetivamente essa operação.
+
+
+warranty:
+  source: "Seção 8 - Garantia"
+
+  legal_warranty:
+    source: "Seção 8.1"
+    duration_calendar_days: 90
+    deadline_start: "Recebimento do produto"
+    coverage: "Defeitos de fabricação"
+
+  manufacturer_warranty:
+    source: "Seção 8.2"
+    typical_duration_months:
+      min: 6
+      max: 24
+
+    notes: >
+      A maioria dos fabricantes oferece garantia própria
+      que pode variar de 6 meses a 2 anos.
+      Os prazos e condições específicos estão no
+      certificado de garantia que acompanha o produto.
+
+  exclusions:
+    source: "Seção 8.3"
+    items:
+      - "Desgaste natural de peças, como trastes, cordas, feltros e palhetas de sopro"
+      - "Danos por mau uso ou queda"
+      - "Exposição a condições climáticas extremas"
+      - "Modificações ou reparos realizados por terceiros não autorizados"
+      - "Danos estéticos que não afetem a funcionalidade"
+
+
+privacy:
+  source: "Seção 9 - Privacidade e Proteção de Dados"
+  applicable_law: "LGPD - Lei nº 13.709/2018"
+
+  collected_data:
+    - Nome
+    - Telefone
+    - Email
+    - Endereço
+
+  allowed_purposes:
+    - Processamento e entrega de pedidos
+    - Comunicação sobre status de pedidos e rastreamento
+    - Envio de promoções e novidades mediante consentimento explícito
+    - Cumprimento de obrigações legais e fiscais
+
+  third_party_marketing_sharing: false
+  data_deletion_request: "WhatsApp ou email da loja"
+
+  notes: >
+    O manual informa que dados de clientes não são
+    compartilhados com terceiros para fins de marketing.
+    O cliente pode solicitar a exclusão de seus dados
+    entrando em contato com a loja.
+
+
+general_guidelines:
+  source: "Seção 10 - Disposições Finais"
+  manual_version: "2.1"
+  last_updated: "Junho de 2025"
+
+  policy_updates: >
+    As políticas descritas no manual estão sujeitas
+    a atualizações periódicas.
+
+  uncertain_cases: >
+    Em caso de dúvida sobre a aplicação de qualquer
+    política, o atendente deve consultar a gerência
+    antes de fornecer informações ao cliente.
+
+  principles:
+    - Transparência
+    - Precisão
+    - Boa experiência do cliente
+
+
+# Divergências identificadas no documento original.
+# Preservadas para evitar interpretações arbitrárias.
+
+document_inconsistencies:
+  contact_numbers:
+    company_information: "(67) 3341-4444"
+    whatsapp_service: "(67) 3321-4500"
+
+    notes: >
+      A seção 1.2 apresenta o telefone geral da empresa,
+      enquanto a seção 7 apresenta outro número como
+      canal principal de atendimento via WhatsApp.
+
+  email:
+    cover: "contato@emporiodamusica.com.br"
+    company_information: "contato@empóriodamusica.com.br"
+
+    notes: >
+      O endereço apresentado na seção 1.2 contém um
+      acento que não aparece no endereço da capa.
+      Confirmar o endereço correto antes de utilizá-lo.
+
+  warranty_and_exchanges:
+    exchange_deadline_days: 30
+    legal_warranty_days: 90
+
+    notes: >
+      A seção 4.2 apresenta prazo de 30 dias para troca
+      por defeito, enquanto a seção 8.1 estabelece
+      garantia legal de 90 dias. Não tratar os prazos
+      como equivalentes nem negar a garantia legal.
+
+  credit_card_installments:
+    general_min_installment_brl: 100.00
+
+    notes: >
+      A tabela da seção 3 menciona parcela mínima de
+      R$ 100,00. A seção 3.1 especifica condições
+      diferentes conforme a quantidade de parcelas.
+      Em caso de ambiguidade, consultar a gerência.
