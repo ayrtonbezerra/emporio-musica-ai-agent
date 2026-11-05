@@ -1,9 +1,9 @@
-
 from langchain.tools import tool
 from emporio.repositories.policies import get_policy
+from emporio.schemas.policies import GetStorePolicyInput
+from emporio.tools.errors import handle_validation_error, tool_error
 
-
-@tool
+@tool(args_schema=GetStorePolicyInput)
 def get_store_policy(topic: str) -> dict:
     """Consulta as políticas e procedimentos da Empório da Música.
 
@@ -31,6 +31,9 @@ def get_store_policy(topic: str) -> dict:
     policy = get_policy(topic)
 
     if policy is None:
-        return {"error": "Política não encontrada."}
+        return tool_error(
+            code="NOT_FOUND",
+            message="A política solicitada não está disponível.",
+        )
 
-    return policy
+get_store_policy.handle_validation_error = handle_validation_error

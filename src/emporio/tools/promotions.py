@@ -1,8 +1,11 @@
 from langchain.tools import tool
 from emporio.repositories.promotions import get_promotions as query_promotions
+from emporio.schemas.promotions import GetPromotionsInput
+from emporio.tools.errors import handle_validation_error, tool_error, handle_database_errors
 
 
-@tool
+@tool(args_schema=GetPromotionsInput)
+@handle_database_errors
 def get_promotions(product_id: int | None = None) -> list[dict]:
     """Consulta as promoções ativas da Empório da Música.
 
@@ -21,3 +24,5 @@ def get_promotions(product_id: int | None = None) -> list[dict]:
     consulte a política 'promotions' da loja.
     """
     return query_promotions(product_id)
+
+get_promotions.handle_validation_error = handle_validation_error

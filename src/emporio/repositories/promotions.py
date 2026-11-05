@@ -20,6 +20,8 @@ def get_promotions(product_id: int | None = None) -> list[dict]:
         JOIN products p
             ON pr.product_id = p.product_id
         WHERE pr.is_active = TRUE
+            AND p.status = 'active'
+            AND p.stock_quantity > 0
     """
 
     params = []
